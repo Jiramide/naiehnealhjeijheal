@@ -7,6 +7,7 @@ import App from './App';
 import Home from './components/Home';
 import OperatorList from './components/OperatorList';
 import Operator from './components/Operator';
+import OperatorStats from './components/Operator/Stats';
 import OperatorSkills from './components/Operator/Skills';
 import OperatorSkill from './components/Operator/Skill';
 
@@ -22,8 +23,9 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/operators" element={<OperatorList />} />
         <Route path="/operators/:operator" element={<Operator />}>
+          <Route index element={<OperatorStats />} />
           <Route path="skills" element={<OperatorSkills />}>
-            <Route path=":skill" element={<OperatorSkill />} />
+            <Route path=":skill" element={<OperatorSkill level={1} />} />
           </Route>
         </Route>
       </Routes>

@@ -1,17 +1,18 @@
 import React from 'react'
-import { Outlet, useParams } from 'react-router-dom';
+import { Outlet, Link, useParams } from 'react-router-dom';
 
+import useOperator from '../../lib/OperatorHook';
 import './Operator.css';
 
-
 function Operator({}) {
-  const { operator } = useParams();
-
-  console.log(operator);
+  const operator = useOperator();
+  const operatorName = operator.getName();
 
   return (
     <>
-      <p>Operator: {operator}</p>
+      <p>Operator: {operatorName}</p>
+      <Link to="">Stats</Link>
+      <Link to="skills">Skills</Link>
       <Outlet />
     </>
   );
