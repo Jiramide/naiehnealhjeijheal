@@ -1,0 +1,6 @@
+.operator-list {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+}
