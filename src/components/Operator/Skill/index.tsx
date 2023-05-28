@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import './Skill.css';
+
+import {
+  SkillLevel,
+} from '../../../lib/OperatorData';
 
 function Skill({ level }) {
   const {operator, skill} = useParams();
