@@ -16,17 +16,19 @@ function OperatorCard({ operator }: Props) {
 
   return (
     <Link to={operatorName}>
-      <img
-        className="operator-card-image"
-        src={operatorImage}
-        alt={operatorName}
-      />
+      <div className="operator-card">
+        <img
+          className="operator-card-image"
+          src={operatorImage}
+          alt={operatorName}
+        />
 
-      <p
-        className="operator-card-name"
-      >
-        {operatorName}
-      </p>
+        <p
+          className="operator-card-name"
+        >
+          {operatorName}
+        </p>
+      </div>
     </Link>
   );
 }
